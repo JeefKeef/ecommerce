@@ -1,18 +1,19 @@
-import * as React from 'react'
-import styled from 'styled-components'
+import * as React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
-    align-items: center;
-    background-color: red;
-    color: white;
-    display: flex;
-    font-size: 14px;
-    font-weight: bold;
-    height: 30px;
-    justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  justify-content: center;
+`;
 
-`
+const Announcement = () => {
+  return <Container>Announcement</Container>;
+};
 
-export const Announcement = () => {
-  return <Container>Announcement</Container>
-}
+export default Announcement;
