@@ -1,21 +1,21 @@
 import * as React from 'react';
 import './App.css';
-import Cart from './pages/Cart';
+// import Cart from './pages/Cart';
 // import Login from './pages/Login';
 // import Register from './pages/Register';
 // import Product from './pages/Product';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 // import ProductList from './pages/ProductList';
 
 function App() {
   return (
     <div>
-      {/* <Home /> */}
+      <Home />
       {/* <ProductList /> */}
       {/* <Product /> */}
       {/* <Register /> */}
       {/* <Login /> */}
-      <Cart />
+      {/* <Cart /> */}
     </div>
   );
 }

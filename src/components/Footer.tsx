@@ -10,6 +10,7 @@ import {
   Room,
   Twitter,
 } from '@material-ui/icons';
+import { mobile } from '../responsive';
 
 type SocialIconProps = {
   color: string;
@@ -17,6 +18,7 @@ type SocialIconProps = {
 
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const Left = styled.div`
@@ -29,11 +31,13 @@ const Left = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 2rem;
+  ${mobile({ display: 'none' })}
 `;
 
 const Right = styled.div`
   flex: 1;
   padding: 2rem;
+  ${mobile({ backgroundColor: '#eee' })}
 `;
 
 const Logo = styled.h1``;

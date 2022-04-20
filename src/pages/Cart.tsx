@@ -5,6 +5,7 @@ import { Add, Remove } from '@material-ui/icons';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { mobile } from '../responsive';
 
 type TopButtonProps = {
   btn?: string;
@@ -22,6 +23,7 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 1.5rem;
+  ${mobile({ padding: '.5rem' })}
 `;
 
 const Title = styled.h1`
@@ -46,7 +48,9 @@ const TopButton = styled.button<TopButtonProps>`
   padding: 0.5rem;
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({ display: 'none' })}
+`;
 
 const TopText = styled.span`
   cursor: pointer;
@@ -57,6 +61,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const Info = styled.div`
@@ -74,6 +79,7 @@ const Summary = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const ProductDetail = styled.div`
@@ -120,11 +126,13 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 24px;
   margin: 0.3rem;
+  ${mobile({ margin: '0.3rem 1rem' })}
 `;
 
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: bold;
+  ${mobile({ marginBottom: '1.5rem' })}
 `;
 
 const Hr = styled.hr`
@@ -179,14 +187,14 @@ const Cart = () => {
                 <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> Du ma
+                    <b>Product: </b> Du ma
                   </ProductName>
                   <ProductId>
-                    <b>ID:</b>123456789x
+                    <b>ID: </b>123456789x
                   </ProductId>
                   <ProductColor color="black" />
                   <ProductSize>
-                    <b>Size:</b> 10
+                    <b>Size: </b> 10
                   </ProductSize>
                 </Details>
               </ProductDetail>

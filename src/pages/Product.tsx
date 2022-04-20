@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { mobile } from '../responsive';
 
 type FilterColorProps = {
   color: string;
@@ -15,6 +16,7 @@ const Container = styled.div``;
 const Wrapper = styled.div`
   display: flex;
   padding: 3rem;
+  ${mobile({ padding: '.5rem', flexDirection: 'column' })}
 `;
 
 const ImgContainer = styled.div`
@@ -26,10 +28,13 @@ const Image = styled.img`
   height: 90vh;
   object-fit: cover;
   width: 100%;
+  ${mobile({ height: '40vh' })}
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
+  padding: 0 4.5rem;
+  ${mobile({ padding: '.5rem' })}
 `;
 
 const Title = styled.h1`
@@ -50,6 +55,7 @@ const FilterContainer = styled.div`
   justify-content: space-between;
   margin: 2rem 0;
   width: 50%;
+  ${mobile({width:'100%'})}
 `;
 
 const Filter = styled.div`
@@ -83,6 +89,7 @@ const AddContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 50%;
+  ${mobile({width:'100%'})}
 `;
 
 const AmountContainer = styled.div`

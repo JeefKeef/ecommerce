@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 type CategoryItemProps = {
   item: {
@@ -21,6 +22,7 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   width: 100%;
+  ${mobile({ height: '30vh' })}
 `;
 
 const Title = styled.h1`
